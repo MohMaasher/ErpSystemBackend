@@ -1,0 +1,51 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio user-specific files
+*.user
+*.suo
+.vs/
+
+# Development settings (avoid committing sensitive data)
+appsettings.Development.json
+
+# Build artifacts
+*.cache
+*.dll
+*.exe
+*.pdb
+*.vspscc
+*.vssscc
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# IDE directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
