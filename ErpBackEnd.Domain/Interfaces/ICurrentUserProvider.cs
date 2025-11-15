@@ -9,32 +9,22 @@ public interface ICurrentUserProvider
     /// <summary>
     /// Get current user ID
     /// </summary>
-    string? UserId { get; }
+    int UserId { get; }
 
     /// <summary>
     /// Get current username
     /// </summary>
-    string? Username { get; }
+    string Username { get; }
 
     /// <summary>
-    /// Get current user email
+    /// Get tenant/company ID for multi-tenancy support
     /// </summary>
-    string? Email { get; }
+    string? TenantId { get; }
 
     /// <summary>
-    /// Get current user's branch code
+    /// Get user's IP address
     /// </summary>
-    string? BranchCode { get; }
-
-    /// <summary>
-    /// Get current user's company code
-    /// </summary>
-    string? CompanyCode { get; }
-
-    /// <summary>
-    /// Get current user's roles
-    /// </summary>
-    IEnumerable<string> Roles { get; }
+    string? IpAddress { get; }
 
     /// <summary>
     /// Get current user's permissions
@@ -42,27 +32,7 @@ public interface ICurrentUserProvider
     IEnumerable<string> Permissions { get; }
 
     /// <summary>
-    /// Check if user has a specific permission
+    /// Get current user's roles
     /// </summary>
-    bool HasPermission(string permission);
-
-    /// <summary>
-    /// Check if user has a specific role
-    /// </summary>
-    bool HasRole(string role);
-
-    /// <summary>
-    /// Get user's IP address
-    /// </summary>
-    string? IPAddress { get; }
-
-    /// <summary>
-    /// Get user's browser/client information
-    /// </summary>
-    string? UserAgent { get; }
-
-    /// <summary>
-    /// Check if user is authenticated
-    /// </summary>
-    bool IsAuthenticated { get; }
+    IEnumerable<string> Roles { get; }
 }
