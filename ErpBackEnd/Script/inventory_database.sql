@@ -1,6 +1,6 @@
 ﻿USE [dbc01y30]
 GO
-/****** Object:  Table [dbo].[orpacking]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[orpacking]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[orpacking](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stbins]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stbins]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -48,7 +48,7 @@ CREATE TABLE [dbo].[stbins](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stbranch]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stbranch]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -189,22 +189,7 @@ CREATE TABLE [dbo].[stbranch](
 	[jv_216] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stbrand]    Script Date: 2025-11-15 11:56:46 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[stbrand](
-	[brand_id] [numeric](4, 0) NOT NULL,
-	[name] [char](15) NOT NULL,
-	[lname] [char](15) NOT NULL,
- CONSTRAINT [PK_stbrand] PRIMARY KEY CLUSTERED 
-(
-	[brand_id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[stbrprice]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stbrprice]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -243,7 +228,7 @@ CREATE TABLE [dbo].[stbrprice](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stclass]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stclass]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -278,36 +263,7 @@ CREATE TABLE [dbo].[stclass](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stcosttype]    Script Date: 2025-11-15 11:56:46 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[stcosttype](
-	[branch] [char](2) NOT NULL,
-	[itemno] [char](16) NOT NULL,
-	[unicode] [char](6) NOT NULL,
-	[lastlcost] [float] NULL,
-	[highlcost] [float] NULL,
-	[lowlcost] [float] NULL,
-	[lstrcvdate] [char](8) NULL,
-	[lastfcost] [float] NULL,
-	[frstrcvdate] [char](8) NULL,
-	[frstrcvd01] [char](8) NULL,
-	[lastrcvd01] [char](8) NULL,
-	[lastlcost01] [float] NULL,
-	[frstlcost01] [float] NULL,
-	[pufrstlcost] [float] NULL,
-	[brlastissue] [char](8) NULL,
- CONSTRAINT [PK_stcosttype_1] PRIMARY KEY CLUSTERED 
-(
-	[branch] ASC,
-	[itemno] ASC,
-	[unicode] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[stdtl]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stdtl]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -350,7 +306,7 @@ CREATE TABLE [dbo].[stdtl](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[sthdr]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[sthdr]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -396,7 +352,7 @@ CREATE TABLE [dbo].[sthdr](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stitembc]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stitembc]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -422,25 +378,26 @@ CREATE TABLE [dbo].[stitembc](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stitempictures]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stitembc_brprice]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[stitempictures](
+CREATE TABLE [dbo].[stitembc_brprice](
+	[branch] [char](2) NOT NULL,
+	[pbarcode] [char](20) NOT NULL,
 	[cmbkey] [char](24) NOT NULL,
-	[picture_order] [int] NOT NULL,
-	[picture_name] [varchar](200) NULL,
-	[default_picture] [bit] NULL,
-	[item_image] [image] NULL,
- CONSTRAINT [PK_stitempictures_1] PRIMARY KEY CLUSTERED 
+	[lprice1] [numeric](11, 2) NULL,
+	[mnmprice] [numeric](11, 2) NULL,
+	[lprice2] [numeric](11, 2) NULL,
+ CONSTRAINT [PK_stitembc_brprice] PRIMARY KEY CLUSTERED 
 (
-	[cmbkey] ASC,
-	[picture_order] ASC
+	[branch] ASC,
+	[pbarcode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stitems]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stitems]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -484,7 +441,7 @@ CREATE TABLE [dbo].[stitems](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stitmphoto]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stitmphoto]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -517,7 +474,7 @@ CREATE TABLE [dbo].[stitmphoto](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stprice]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stprice]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -535,7 +492,7 @@ CREATE TABLE [dbo].[stprice](
 	[lastupdt] [char](8) NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stunits]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stunits]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -602,7 +559,7 @@ CREATE TABLE [dbo].[stunits](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[stwhous]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[stwhous]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -634,7 +591,7 @@ CREATE TABLE [dbo].[stwhous](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[supplier]    Script Date: 2025-11-15 11:56:46 AM ******/
+/****** Object:  Table [dbo].[supplier]    Script Date: 2025-11-15 12:10:41 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -690,251 +647,6 @@ CREATE TABLE [dbo].[supplier](
 	[cf_fcy] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[supplier_ei]    Script Date: 2025-11-15 11:56:46 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[supplier_ei](
-	[cu_company] [char](2) NOT NULL,
-	[cu_code] [char](6) NOT NULL,
-	[cf_fcy] [char](3) NOT NULL,
-	[district] [varchar](50) NULL,
-	[district_l] [varchar](50) NULL,
-	[city_text] [varchar](50) NULL,
-	[city_text_l] [varchar](50) NULL,
-	[country_code] [numeric](3, 0) NULL,
-	[postal_code] [varchar](20) NULL,
-	[Other_id_SchemeID] [varchar](20) NULL,
-	[bldg_no] [varchar](50) NULL,
-	[bldg_no_l] [varchar](50) NULL,
-	[street_name] [varchar](50) NULL,
-	[street_name_l] [varchar](50) NULL,
-	[area_name] [varchar](50) NULL,
-	[area_name_l] [varchar](50) NULL,
-	[extra_address_no] [varchar](50) NULL,
-	[extra_address_no_l] [varchar](50) NULL,
-	[street_name2] [varchar](50) NULL,
-	[street_name2_l] [varchar](50) NULL,
-	[Group_VAT_ID] [varchar](30) NULL,
-	[Other_Scheme_Type] [varchar](10) NULL,
- CONSTRAINT [PK_supplier_ei] PRIMARY KEY CLUSTERED 
-(
-	[cu_company] ASC,
-	[cu_code] ASC,
-	[cf_fcy] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[sysgp]    Script Date: 2025-11-15 11:56:46 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[sysgp](
-	[grpid] [char](10) NOT NULL,
-	[groupname] [varchar](30) NOT NULL,
-	[formkey] [text] NOT NULL,
-	[formsel] [text] NOT NULL,
-	[formname] [text] NOT NULL,
-	[showcost] [bit] NOT NULL,
-	[acssdisc] [bit] NOT NULL,
-	[acssfqty] [bit] NOT NULL,
-	[chgprice] [bit] NOT NULL,
-	[undrcost] [bit] NOT NULL,
-	[undrmin] [bit] NOT NULL,
-	[belowbal] [bit] NOT NULL,
-	[uchgpas] [bit] NOT NULL,
-	[shwacprtct] [bit] NOT NULL,
-	[useprice1] [bit] NOT NULL,
-	[useprice2] [bit] NOT NULL,
-	[useprice3] [bit] NOT NULL,
-	[maxdsc] [numeric](4, 2) NOT NULL,
-	[maxfqty] [numeric](6, 2) NOT NULL,
-	[usrbrn] [text] NOT NULL,
-	[msuser] [bit] NOT NULL,
-	[uspright] [text] NOT NULL,
-	[uswhalw] [text] NOT NULL,
-	[uscntralw] [text] NOT NULL,
-	[usdptalw] [text] NOT NULL,
-	[uslatin] [bit] NOT NULL,
-	[crdtsales] [bit] NOT NULL,
-	[usslcsh] [bit] NOT NULL,
-	[usslcrd] [bit] NOT NULL,
-	[usslrcsh] [bit] NOT NULL,
-	[usslrcrd] [bit] NOT NULL,
-	[uspucsh] [bit] NOT NULL,
-	[uspucrd] [bit] NOT NULL,
-	[uspurcsh] [bit] NOT NULL,
-	[uspurcrd] [bit] NOT NULL,
-	[usjv] [bit] NOT NULL,
-	[usrcv] [bit] NOT NULL,
-	[usiss] [bit] NOT NULL,
-	[uschqrcv] [bit] NOT NULL,
-	[uschqiss] [bit] NOT NULL,
-	[ustrnsin] [bit] NOT NULL,
-	[ustrnsout] [bit] NOT NULL,
-	[usbnkin] [bit] NOT NULL,
-	[uscredit] [bit] NOT NULL,
-	[usdebit] [bit] NOT NULL,
-	[ussuspend] [bit] NOT NULL,
-	[actallow] [text] NOT NULL,
-	[openallow] [bit] NOT NULL,
-	[cstallow] [text] NOT NULL,
-	[editothers] [bit] NOT NULL,
-	[usalwchgprs] [bit] NOT NULL,
-	[dsplyothers] [bit] NOT NULL,
-	[chgperiod] [bit] NOT NULL,
-	[chgtdate] [bit] NOT NULL,
-	[alwprntrpt] [bit] NOT NULL,
-	[ussctnalw] [text] NULL,
- CONSTRAINT [PK_sysgp] PRIMARY KEY CLUSTERED 
-(
-	[grpid] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[sysuse]    Script Date: 2025-11-15 11:56:46 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[sysuse](
-	[username] [char](10) NOT NULL,
-	[formkey] [text] NULL,
-	[formsel] [text] NULL,
-	[formname] [text] NULL,
-	[password] [char](100) NOT NULL,
-	[fullname] [varchar](30) NULL,
-	[showcost] [bit] NULL,
-	[acssdisc] [bit] NULL,
-	[chgprice] [bit] NULL,
-	[acssfqty] [bit] NULL,
-	[undrcost] [bit] NULL,
-	[undrmin] [bit] NULL,
-	[belowbal] [bit] NULL,
-	[grp] [text] NULL,
-	[company] [char](2) NULL,
-	[uchgpas] [bit] NULL,
-	[shwacprtct] [bit] NULL,
-	[useprice1] [bit] NULL,
-	[useprice2] [bit] NULL,
-	[useprice3] [bit] NULL,
-	[maxdsc] [numeric](4, 2) NULL,
-	[maxfqty] [numeric](6, 2) NULL,
-	[currate] [numeric](6, 3) NULL,
-	[usrbrn] [text] NULL,
-	[msuser] [bit] NULL,
-	[uspright] [text] NULL,
-	[uswhalw] [text] NULL,
-	[uscntralw] [text] NULL,
-	[usdptalw] [text] NULL,
-	[uslatin] [bit] NULL,
-	[usslcsh] [bit] NULL,
-	[usslcrd] [bit] NULL,
-	[usslrcsh] [bit] NULL,
-	[usslrcrd] [bit] NULL,
-	[uspucsh] [bit] NULL,
-	[uspucrd] [bit] NULL,
-	[uspurcsh] [bit] NULL,
-	[uspurcrd] [bit] NULL,
-	[usjv] [bit] NULL,
-	[usrcv] [bit] NULL,
-	[usiss] [bit] NULL,
-	[uschqrcv] [bit] NULL,
-	[uschqiss] [bit] NULL,
-	[ustrnsin] [bit] NULL,
-	[ustrnsout] [bit] NULL,
-	[usbnkin] [bit] NULL,
-	[uscredit] [bit] NULL,
-	[usdebit] [bit] NULL,
-	[ussuspend] [bit] NULL,
-	[actallow] [text] NULL,
-	[openallow] [bit] NULL,
-	[cstallow] [text] NULL,
-	[editothers] [bit] NULL,
-	[suspend] [bit] NULL,
-	[usalwchgprs] [bit] NULL,
-	[dsplyothers] [bit] NULL,
-	[chgperiod] [bit] NULL,
-	[chgtdate] [bit] NULL,
-	[alwprntrpt] [bit] NULL,
-	[printinv] [bit] NULL,
-	[printtrx] [bit] NULL,
-	[printbarcode] [bit] NULL,
-	[onlinepost] [bit] NULL,
-	[showitmcst] [bit] NULL,
-	[usmagnetic] [bit] NULL,
-	[sendsms] [bit] NULL,
-	[usslprofit] [bit] NULL,
-	[posuser] [bit] NULL,
-	[inv_form_no] [numeric](2, 0) NULL,
-	[ushide_jv] [bit] NULL,
-	[uschdlcshinv] [bit] NULL,
-	[uschdlcshrcv] [bit] NULL,
-	[uschdlchqrcv] [bit] NULL,
-	[usshowprofit] [bit] NULL,
-	[goblwmnmp] [bit] NULL,
-	[usfpalw] [bit] NULL,
-	[usfpimage] [text] NULL,
-	[mobileuser] [bit] NULL,
-	[confirmPurchase] [bit] NULL,
-	[noovrdrft] [bit] NULL,
-	[onlyactrmt] [bit] NULL,
-	[confirmbr] [bit] NULL,
-	[passwordPDA] [varbinary](200) NULL,
-	[confirmtrnsfr] [bit] NULL,
-	[nopriceblwcost] [bit] NULL,
-	[mgmtcnfrm] [bit] NULL,
-	[mobilNo] [nvarchar](30) NULL,
-	[OTP] [int] NULL,
-	[web_rights] [nvarchar](254) NULL,
-	[NorgstrNoSl] [bit] NULL,
-	[ussctnalw] [text] NULL,
-	[Noslsblwcst] [bit] NULL,
-	[AlwChangeVAT] [bit] NULL,
-	[emp_code] [char](10) NULL,
-	[blkassmbld] [bit] NULL,
-	[usfpimage2] [text] NULL,
-	[max_inv_printed] [numeric](2, 0) NULL,
-	[max_fsh_printed] [numeric](2, 0) NULL,
-	[usissrqst] [bit] NULL,
-	[usstiss] [bit] NULL,
-	[usstrcv] [bit] NULL,
-	[e_invrdy] [bit] NULL,
-	[smartsearch] [bit] NULL,
-	[e_password] [varbinary](200) NULL,
-	[applymnmallprices] [bit] NULL,
-	[smartsrch_itemBaltype] [numeric](1, 0) NULL,
-	[puinv_cost_notalwd] [bit] NULL,
-	[mnmppalw] [numeric](5, 2) NULL,
-	[nopostslinv] [bit] NULL,
-	[nopostpuinv] [bit] NULL,
-	[nopoststtrx] [bit] NULL,
-	[nochgmaxlmt] [bit] NULL,
-	[no_item_duplicate] [bit] NULL,
-	[no_item_srch_in_puinv] [bit] NULL,
-	[alwsend_doc] [bit] NULL,
-	[alwslfrmslnobal] [bit] NULL,
-	[nochngpromo] [bit] NULL,
-	[dsplyothersQH] [bit] NULL,
-	[hideqhinfo] [bit] NULL,
-	[alwchg_slrtn_price] [bit] NULL,
-	[noadd_crdt_clnt] [bit] NULL,
-	[archv_upload] [bit] NULL,
-	[archv_download] [bit] NULL,
-	[archv_open] [bit] NULL,
-	[archv_delete] [bit] NULL,
-	[alw2usewtsapp] [bit] NULL,
-	[alw2chgwtsmbl] [bit] NULL,
-	[smrtsrch4cmbkey] [bit] NULL,
-	[use_dashboard] [bit] NULL,
- CONSTRAINT [PK_sysuse] PRIMARY KEY CLUSTERED 
-(
-	[username] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[orpacking] ADD  DEFAULT ((0)) FOR [pkwhlsl]
 GO
@@ -1200,28 +912,6 @@ ALTER TABLE [dbo].[stbrprice] ADD  CONSTRAINT [DF_stbrprice_modified]  DEFAULT (
 GO
 ALTER TABLE [dbo].[stclass] ADD  DEFAULT ((0)) FOR [max_sl_limit]
 GO
-ALTER TABLE [dbo].[stcosttype] ADD  CONSTRAINT [DF_stcosttype_lastlcost]  DEFAULT ((0)) FOR [lastlcost]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  CONSTRAINT [DF_stcosttype_highlcost]  DEFAULT ((0)) FOR [highlcost]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  CONSTRAINT [DF_stcosttype_lowlcost]  DEFAULT ((0)) FOR [lowlcost]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  CONSTRAINT [DF_stcosttype_lastfcost]  DEFAULT ((0)) FOR [lastfcost]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ('') FOR [frstrcvdate]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ('') FOR [frstrcvd01]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ('') FOR [lastrcvd01]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ((0)) FOR [lastlcost01]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ((0)) FOR [frstlcost01]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ((0)) FOR [pufrstlcost]
-GO
-ALTER TABLE [dbo].[stcosttype] ADD  DEFAULT ('') FOR [brlastissue]
-GO
 ALTER TABLE [dbo].[stdtl] ADD  CONSTRAINT [DF_stdtl_lprice]  DEFAULT ((0)) FOR [lprice]
 GO
 ALTER TABLE [dbo].[stdtl] ADD  CONSTRAINT [DF_stdtl_fcost]  DEFAULT ((0)) FOR [fcost]
@@ -1364,122 +1054,6 @@ ALTER TABLE [dbo].[supplier] ADD  CONSTRAINT [DF__supplier__PriceI__526429B0]  D
 GO
 ALTER TABLE [dbo].[supplier] ADD  CONSTRAINT [DF__supplier__cu_typ__53584DE9]  DEFAULT ('') FOR [cu_type]
 GO
-ALTER TABLE [dbo].[sysgp] ADD  DEFAULT ('') FOR [ussctnalw]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_suspend]  DEFAULT ((0)) FOR [suspend]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_posuser]  DEFAULT ((0)) FOR [posuser]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_hide_jv]  DEFAULT ((0)) FOR [ushide_jv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_uschdlcshinv]  DEFAULT ((0)) FOR [uschdlcshinv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_uschdlcshrcv]  DEFAULT ((0)) FOR [uschdlcshrcv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_uschdlchqrcv]  DEFAULT ((0)) FOR [uschdlchqrcv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_us_no_profit]  DEFAULT ((0)) FOR [usshowprofit]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_goblwmnmp]  DEFAULT ((0)) FOR [goblwmnmp]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_mobileuser]  DEFAULT ((0)) FOR [mobileuser]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_confirmPurchase]  DEFAULT ((0)) FOR [confirmPurchase]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  CONSTRAINT [DF_sysuse_noovrdrft]  DEFAULT ((0)) FOR [noovrdrft]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [onlyactrmt]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [confirmbr]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [confirmtrnsfr]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nopriceblwcost]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [mgmtcnfrm]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ('') FOR [mobilNo]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [OTP]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ('') FOR [web_rights]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [NorgstrNoSl]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ('') FOR [ussctnalw]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [Noslsblwcst]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [AlwChangeVAT]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ('') FOR [emp_code]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [blkassmbld]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ('') FOR [usfpimage2]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [max_inv_printed]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [max_fsh_printed]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [usissrqst]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [usstiss]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [usstrcv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((1)) FOR [e_invrdy]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [smartsearch]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [applymnmallprices]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((1)) FOR [smartsrch_itemBaltype]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [puinv_cost_notalwd]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [mnmppalw]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nopostslinv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nopostpuinv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nopoststtrx]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nochgmaxlmt]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [no_item_duplicate]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [no_item_srch_in_puinv]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [alwslfrmslnobal]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [nochngpromo]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [dsplyothersQH]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [hideqhinfo]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [alwchg_slrtn_price]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [noadd_crdt_clnt]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [archv_upload]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [archv_download]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [archv_open]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [archv_delete]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [alw2usewtsapp]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [alw2chgwtsmbl]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [smrtsrch4cmbkey]
-GO
-ALTER TABLE [dbo].[sysuse] ADD  DEFAULT ((0)) FOR [use_dashboard]
-GO
 ALTER TABLE [dbo].[stbins]  WITH CHECK ADD  CONSTRAINT [FK_stbins_stunits] FOREIGN KEY([itemno], [unicode])
 REFERENCES [dbo].[stunits] ([itemno], [unicode])
 ON DELETE CASCADE
@@ -1504,11 +1078,11 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[stitembc] CHECK CONSTRAINT [FK_stitembc_stunits]
 GO
-ALTER TABLE [dbo].[stitempictures]  WITH CHECK ADD  CONSTRAINT [FK_stitempictures_stunits] FOREIGN KEY([cmbkey])
-REFERENCES [dbo].[stunits] ([cmbkey])
+ALTER TABLE [dbo].[stitembc_brprice]  WITH CHECK ADD  CONSTRAINT [FK_stitembc_brprice_stitembc] FOREIGN KEY([pbarcode])
+REFERENCES [dbo].[stitembc] ([pbarcode])
 ON DELETE CASCADE
 GO
-ALTER TABLE [dbo].[stitempictures] CHECK CONSTRAINT [FK_stitempictures_stunits]
+ALTER TABLE [dbo].[stitembc_brprice] CHECK CONSTRAINT [FK_stitembc_brprice_stitembc]
 GO
 ALTER TABLE [dbo].[stitmphoto]  WITH CHECK ADD  CONSTRAINT [FK_stitmphoto_stunits] FOREIGN KEY([itemno], [unicode])
 REFERENCES [dbo].[stunits] ([itemno], [unicode])
@@ -1516,17 +1090,9 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[stitmphoto] CHECK CONSTRAINT [FK_stitmphoto_stunits]
 GO
-ALTER TABLE [dbo].[supplier_ei]  WITH CHECK ADD  CONSTRAINT [FK_supplier_supplier_ei] FOREIGN KEY([cu_company], [cu_code], [cf_fcy])
-REFERENCES [dbo].[supplier] ([cu_company], [cu_code], [cf_fcy])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[supplier_ei] CHECK CONSTRAINT [FK_supplier_supplier_ei]
-GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'used for transaction between branch and can be used to slcenter of pu & sl ' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sthdr', @level2type=N'COLUMN',@level2name=N'tobrno'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'this used for assembled item but if the value is 9 this means its transfer trx from trx between branch system' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sthdr', @level2type=N'COLUMN',@level2name=N'asmtype'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Repost those transactions that were not entered in this local database' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sthdr', @level2type=N'COLUMN',@level2name=N'repost'
-GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'if true user can sale below minimum sales price of items' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'sysuse', @level2type=N'COLUMN',@level2name=N'goblwmnmp'
 GO
